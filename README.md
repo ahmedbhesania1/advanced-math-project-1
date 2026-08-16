@@ -1,243 +1,439 @@
-# Probability & Statistics Student Analysis Project {#probability--statistics-student-analysis-project}
+# Probability & Statistics Student Analysis Project
 
-> 🎥 **Project Explanation Video:** [Watch the Project Explanation
-> Video](https://drive.google.com/file/d/1C6Sgz9Hkp-hhejKDX2NlVLwOfYDkOikb/view?usp=sharing)
+> 🎥 **Project Explanation Video:** [Watch the Project Explanation Video](https://drive.google.com/file/d/1C6Sgz9Hkp-hhejKDX2NlVLwOfYDkOikb/view?usp=sharing)
 
-## 📌 Project Overview {#pushpin-project-overview}
+## 📌 Project Overview
 
-This project applies fundamental **probability and statistics concepts**
-to a dataset of **200 students**. The dataset contains study hours,
-attendance, group discussion participation, previous test scores, and
-final exam results.
+This project applies fundamental **probability and statistics concepts** to a dataset of **200 students**.
 
-The project focuses on applying probability concepts to real student
-data and interpreting the results.
+The dataset contains information about:
 
-## 📊 Dataset {#bar_chart-dataset}
+- Study hours per week
+- Attendance percentage
+- Group discussion participation
+- Previous test score
+- Final exam result
 
-  Column                  Description
-  ----------------------- --------------------------------------------------
-  `study_hours`           Number of hours a student studied per week
-  `attendance`            Percentage attendance in lectures
-  `group_discussion`      Participation in group discussions (`Yes`/`No`)
-  `previous_test_score`   Marks out of 100 from the previous internal test
-  `final_exam_pass`       Final exam result (`Pass`/`Fail`)
+The main goal of this project is to understand how probability concepts can be applied to real-world student data and how different events and variables can be analyzed.
 
-## 🎯 Topics Covered {#dart-topics-covered}
+---
 
--   Probability and probability terminology
--   Random experiments, outcomes, sample spaces, and events
--   Random variables
--   Probability distributions
--   PMF
--   Expected value / mean
--   Variance
--   Venn diagrams
--   Contingency tables
--   Joint probability
--   Marginal probability
--   Conditional probability
--   Independent and dependent events
--   Mutually exclusive events
--   Bayes\' Theorem
+## 📊 Dataset
 
-## 🎲 Random Variable {#game_die-random-variable}
+The dataset contains **200 student records** with the following columns:
+
+| Column | Description |
+|---|---|
+| `study_hours` | Number of hours a student studied per week |
+| `attendance` | Percentage attendance in lectures |
+| `group_discussion` | Participation in group discussions (`Yes`/`No`) |
+| `previous_test_score` | Marks out of 100 from the previous internal test |
+| `final_exam_pass` | Final exam result (`Pass`/`Fail`) |
+
+---
+
+## 🎯 Topics Covered
+
+- Probability
+- Random experiment
+- Outcome
+- Sample space
+- Events
+- Random variables
+- Probability distributions
+- PMF
+- Expected value
+- Mean
+- Variance
+- Venn diagrams
+- Contingency tables
+- Joint probability
+- Marginal probability
+- Conditional probability
+- Independent events
+- Dependent events
+- Mutually exclusive events
+- Bayes' Theorem
+
+---
+
+## 🎲 Random Variable
 
 A random variable was defined as:
 
-> **Number of students passing the final exam out of 3 randomly selected
-> students.**
+> **Number of students passing the final exam out of 3 randomly selected students.**
 
-Therefore:
+Therefore, the possible values of the random variable are:
 
-\[ X = {0,1,2,3} \]
+\[
+X = \{0,1,2,3\}
+\]
 
-where `X` represents the number of students who pass.
+Where:
+
+- `X = 0` → No student passes
+- `X = 1` → 1 student passes
+- `X = 2` → 2 students pass
+- `X = 3` → All 3 students pass
 
 ### Probability Distribution
 
-    X   P(X = x)
-  --- ----------
-    0     0.2724
-    1     0.4469
-    2     0.2390
-    3     0.0417
+| X | P(X = x) |
+|---:|---:|
+| 0 | 0.2724 |
+| 1 | 0.4469 |
+| 2 | 0.2390 |
+| 3 | 0.0417 |
 
-The probabilities add up to approximately **1**, so this is a valid
-probability distribution.
+The probabilities add up to approximately **1**, so this is a valid probability distribution.
 
-## 📈 Expected Value {#chart_with_upwards_trend-expected-value}
+---
 
-The expected value is calculated using:
+## 📈 Expected Value
 
-\[ E(X)=\\sum xP(X=x) \]
+The expected value of a discrete random variable is calculated using:
 
-For this distribution:
+\[
+E(X) = \sum xP(X=x)
+\]
 
-\[ E(X)=0(0.2724)+1(0.4469)+2(0.2390)+3(0.0417) \]
+For the above distribution:
 
-\[ E(X) pprox1.05 \]
+\[
+E(X)
+=
+0(0.2724)
++
+1(0.4469)
++
+2(0.2390)
++
+3(0.0417)
+\]
 
-**Interpretation:** In repeated groups of 3 randomly selected students,
-the average number of students passing would be approximately **1.05**.
+\[
+E(X) \approx 1.05
+\]
 
-## 📐 Variance {#triangular_ruler-variance}
+### Interpretation
 
-Variance measures how spread out the random variable is around its
-expected value.
+If groups of 3 students are repeatedly selected, the average number of students passing per group will be approximately **1.05**.
 
-\[ Var(X)=E\[(X-E(X))\^2\] \]
+---
+
+## 📐 Variance
+
+Variance measures how spread out the values of a random variable are around its expected value.
+
+The formula used is:
+
+\[
+Var(X) = E[(X-E(X))^2]
+\]
 
 Using the probability distribution, the variance is approximately:
 
-\[ oxed{0.68} \]
+\[
+\boxed{0.68}
+\]
 
-## 🔵 Venn Diagram {#large_blue_circle-venn-diagram}
+---
 
-A Venn diagram was created for:
+## 🔵 Venn Diagram
 
--   **A:** Students who study more than 10 hours per week
--   **B:** Students who attend more than 80% of classes
+A Venn diagram was created for the following two events:
 
-The overlap represents students satisfying **both conditions**:
+- **A:** Students who study more than 10 hours per week
+- **B:** Students who attend more than 80% of classes
 
-\[ A\\cap B \]
+The overlap represents students who satisfy **both conditions**:
+
+\[
+A \cap B
+\]
 
 For the 200-student dataset:
 
--   Study \> 10 hours only: **85**
--   Attendance \> 80% only: **17**
--   Both conditions: **79**
--   Neither condition: **19**
+- Study > 10 hours only: **85 students**
+- Attendance > 80% only: **17 students**
+- Both conditions: **79 students**
+- Neither condition: **19 students**
 
-## 📋 Contingency Table {#clipboard-contingency-table}
+---
 
-A contingency table was created for `group_discussion` vs
-`final_exam_pass`.
+## 📋 Contingency Table
 
-  Group Discussion       Pass      Fail     Total
-  ------------------ -------- --------- ---------
-  Yes                      40        68       108
-  No                       30        62        92
-  **Total**            **70**   **130**   **200**
+A contingency table was created for:
 
-### Joint Probability
+- `group_discussion`
+- `final_exam_pass`
 
-Probability that a student **participates in group discussion AND
-passes**:
+### Contingency Table
 
-\[ P(Discussion\\cap Pass)=rac{40}{200}=0.20 \]
+| Group Discussion | Pass | Fail | Total |
+|---|---:|---:|---:|
+| Yes | 40 | 68 | 108 |
+| No | 30 | 62 | 92 |
+| **Total** | **70** | **130** | **200** |
 
-\[ oxed{20%} \]
+This table was used to calculate joint, marginal, and conditional probabilities.
 
-### Marginal Probability
+---
 
-Probability that a randomly selected student **passes**:
+## 🔗 Joint Probability
 
-\[ P(Pass)=rac{70}{200}=0.35 \]
+The joint probability of:
 
-\[ oxed{35%} \]
+> Participating in group discussion **AND** passing the exam
 
-### Conditional Probability
+is:
 
-Probability that a student **passes given that they participated in
-group discussion**:
+\[
+P(Discussion \cap Pass)
+=
+\frac{40}{200}
+\]
 
-\[ P(Pass\|Discussion)=rac{40}{108} pprox0.3704 \]
+\[
+=0.20
+\]
 
-\[ oxed{37.04%} \]
+Therefore:
 
-## ⚖️ Independent, Dependent, or Mutually Exclusive? {#balance_scale-independent-dependent-or-mutually-exclusive}
+\[
+\boxed{20\%}
+\]
 
-The events **participating in group discussion** and **passing the
-exam** are:
+---
 
-### Not mutually exclusive
+## 📌 Marginal Probability
 
-They can happen at the same time because **40 students both participated
-and passed**.
+The marginal probability of passing the exam is:
 
-### Dependent
+\[
+P(Pass)
+=
+\frac{70}{200}
+\]
 
-\[ P(Pass)=35% \]
+\[
+=0.35
+\]
 
-while:
+Therefore:
 
-\[ P(Pass\|Discussion)=37.04% \]
+\[
+\boxed{35\%}
+\]
+
+---
+
+## 🔍 Conditional Probability
+
+The probability of passing the exam **given that the student participated in group discussion** is:
+
+\[
+P(Pass|Discussion)
+=
+\frac{40}{108}
+\]
+
+\[
+\approx0.3704
+\]
+
+Therefore:
+
+\[
+\boxed{37.04\%}
+\]
+
+---
+
+## ⚖️ Independent, Dependent, or Mutually Exclusive?
+
+The project checked whether:
+
+> Participating in group discussions and passing the exam
+
+are independent, dependent, or mutually exclusive events.
+
+### Mutually Exclusive?
+
+No.
+
+Mutually exclusive events cannot happen at the same time.
+
+However, **40 students both participated in group discussion and passed the exam**.
+
+Therefore:
+
+\[
+\boxed{\text{They are not mutually exclusive}}
+\]
+
+### Independent or Dependent?
+
+The overall probability of passing is:
+
+\[
+P(Pass)=35\%
+\]
+
+The probability of passing given participation in group discussion is:
+
+\[
+P(Pass|Discussion)=37.04\%
+\]
 
 Since:
 
-\[ 35% eq37.04% \]
+\[
+35\% \neq 37.04\%
+\]
 
 the events are considered **dependent**.
 
-## 🧮 Bayes\' Theorem {#abacus-bayes-theorem}
+Therefore:
 
-Historical probabilities were used to find the probability of passing
-given high attendance.
+\[
+\boxed{\text{The events are dependent}}
+\]
+
+---
+
+## 🧮 Bayes' Theorem
+
+Historical data was used to apply Bayes' Theorem.
 
 Given:
 
-\[ P(H\|P)=0.70 \]
+- 70% of students who pass have high attendance
+- 40% of students who fail have high attendance
+- 60% of all students have high attendance
 
-\[ P(H\|F)=0.40 \]
+Let:
 
-\[ P(H)=0.60 \]
+- `P` = Student passes
+- `F` = Student fails
+- `H` = Student has high attendance
 
-First:
+Given:
 
-\[ P(P)=rac{0.60-0.40}{0.70-0.40}=0.6667 \]
+\[
+P(H|P)=0.70
+\]
 
-Then:
+\[
+P(H|F)=0.40
+\]
 
-\[ P(P\|H)=rac{P(H\|P)P(P)}{P(H)} \]
+\[
+P(H)=0.60
+\]
 
-\[ =rac{0.70(0.6667)}{0.60} \]
+### Step 1: Find P(P)
 
-\[ oxed{P(P\|H) pprox0.7778=77.78%} \]
+First, we find the overall probability of passing:
 
-**Interpretation:** Given high attendance (\>80%), the probability of
-passing is approximately **77.78%** under the stated historical
-assumptions.
+\[
+P(P)
+=
+\frac{0.60-0.40}{0.70-0.40}
+\]
 
-## 🛠️ Tools Used {#hammer_and_wrench-tools-used}
+\[
+P(P)
+=
+\frac{0.20}{0.30}
+\]
 
--   Python
--   Pandas
--   Probability and Statistics
--   Venn diagrams
--   Contingency tables
--   GitHub / Markdown
+\[
+P(P)=0.6667
+\]
 
-## 📚 Learning Outcomes {#books-learning-outcomes}
+Therefore:
 
-This project provided practical experience with:
+\[
+\boxed{P(P)=66.67\%}
+\]
 
--   Calculating and interpreting probability
--   Defining random variables
--   Creating probability distributions
--   Calculating expected value and variance
--   Understanding PMF
--   Using Venn diagrams
--   Creating contingency tables
--   Calculating joint, marginal, and conditional probabilities
--   Identifying dependent and mutually exclusive events
--   Applying Bayes\' Theorem
--   Connecting statistical theory with real-world student data
+### Step 2: Apply Bayes' Theorem
 
-## 📝 Conclusion {#pencil-conclusion}
+\[
+P(P|H)
+=
+\frac{P(H|P)P(P)}{P(H)}
+\]
 
-This project demonstrates how probability and statistics can be applied
-to real-world student data. It combines theoretical concepts with
-practical calculations to analyze student performance, attendance, study
-habits, and group discussion participation.
+Substituting the values:
 
-The project builds a practical understanding of probability
-distributions, expected value, variance, conditional probability,
-contingency tables, and Bayes\' Theorem.
+\[
+P(P|H)
+=
+\frac{0.70(0.6667)}{0.60}
+\]
 
-------------------------------------------------------------------------
+\[
+P(P|H)\approx0.7778
+\]
 
-## 👤 Author {#bust_in_silhouette-author}
+Therefore:
+
+\[
+\boxed{P(P|H)=77.78\%}
+\]
+
+### Interpretation
+
+A student with **high attendance (>80%)** has an estimated **77.78% probability of passing**, based on the given historical probabilities.
+
+---
+
+## 🛠️ Tools Used
+
+- Python
+- Pandas
+- Probability and Statistics
+- Venn diagrams
+- Contingency tables
+- GitHub
+- Markdown
+
+---
+
+## 📚 Learning Outcomes
+
+Through this project, I practiced:
+
+- Calculating and interpreting probability
+- Defining random variables
+- Creating probability distributions
+- Calculating expected value
+- Calculating variance
+- Understanding PMF
+- Creating and interpreting Venn diagrams
+- Creating contingency tables
+- Calculating joint probability
+- Calculating marginal probability
+- Calculating conditional probability
+- Identifying dependent events
+- Identifying mutually exclusive events
+- Applying Bayes' Theorem
+- Applying probability concepts to real-world student data
+
+---
+
+## 📝 Conclusion
+
+This project demonstrates how probability and statistics can be applied to real-world student data.
+
+It combines theoretical probability concepts with practical calculations to analyze student performance, attendance, study habits, and group discussion participation.
+
+The project helped build a practical understanding of **probability distributions, random variables, expected value, variance, conditional probability, contingency tables, and Bayes' Theorem**.
+
+---
+
+## 👤 Author
 
 **Author:- Ahmed Bhesania**
