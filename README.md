@@ -63,11 +63,11 @@ A random variable was defined as:
 
 > **Number of students passing the final exam out of 3 randomly selected students.**
 
-Therefore, the possible values of the random variable are:
+The possible values of the random variable are:
 
-\[
+$$
 X = \{0,1,2,3\}
-\]
+$$
 
 Where:
 
@@ -93,27 +93,23 @@ The probabilities add up to approximately **1**, so this is a valid probability 
 
 The expected value of a discrete random variable is calculated using:
 
-\[
+$$
 E(X) = \sum xP(X=x)
-\]
+$$
 
 For the above distribution:
 
-\[
-E(X)
-=
-0(0.2724)
-+
-1(0.4469)
-+
-2(0.2390)
-+
+$$
+E(X) =
+0(0.2724) +
+1(0.4469) +
+2(0.2390) +
 3(0.0417)
-\]
+$$
 
-\[
+$$
 E(X) \approx 1.05
-\]
+$$
 
 ### Interpretation
 
@@ -127,15 +123,15 @@ Variance measures how spread out the values of a random variable are around its 
 
 The formula used is:
 
-\[
+$$
 Var(X) = E[(X-E(X))^2]
-\]
+$$
 
 Using the probability distribution, the variance is approximately:
 
-\[
-\boxed{0.68}
-\]
+$$
+Var(X) \approx 0.68
+$$
 
 ---
 
@@ -148,16 +144,18 @@ A Venn diagram was created for the following two events:
 
 The overlap represents students who satisfy **both conditions**:
 
-\[
+$$
 A \cap B
-\]
+$$
 
 For the 200-student dataset:
 
-- Study > 10 hours only: **85 students**
-- Attendance > 80% only: **17 students**
-- Both conditions: **79 students**
-- Neither condition: **19 students**
+| Condition | Number of Students |
+|---|---:|
+| Study > 10 hours only | 85 |
+| Attendance > 80% only | 17 |
+| Both conditions | 79 |
+| Neither condition | 19 |
 
 ---
 
@@ -184,25 +182,21 @@ This table was used to calculate joint, marginal, and conditional probabilities.
 
 The joint probability of:
 
-> Participating in group discussion **AND** passing the exam
+> Participating in group discussion **AND** passing the exam.
 
-is:
-
-\[
+$$
 P(Discussion \cap Pass)
 =
 \frac{40}{200}
-\]
+$$
 
-\[
-=0.20
-\]
+$$
+P(Discussion \cap Pass) = 0.20
+$$
 
 Therefore:
 
-\[
-\boxed{20\%}
-\]
+**20%**
 
 ---
 
@@ -210,21 +204,19 @@ Therefore:
 
 The marginal probability of passing the exam is:
 
-\[
+$$
 P(Pass)
 =
 \frac{70}{200}
-\]
+$$
 
-\[
-=0.35
-\]
+$$
+P(Pass) = 0.35
+$$
 
 Therefore:
 
-\[
-\boxed{35\%}
-\]
+**35%**
 
 ---
 
@@ -232,21 +224,19 @@ Therefore:
 
 The probability of passing the exam **given that the student participated in group discussion** is:
 
-\[
-P(Pass|Discussion)
+$$
+P(Pass \mid Discussion)
 =
 \frac{40}{108}
-\]
+$$
 
-\[
-\approx0.3704
-\]
+$$
+P(Pass \mid Discussion) \approx 0.3704
+$$
 
 Therefore:
 
-\[
-\boxed{37.04\%}
-\]
+**37.04%**
 
 ---
 
@@ -268,37 +258,33 @@ However, **40 students both participated in group discussion and passed the exam
 
 Therefore:
 
-\[
-\boxed{\text{They are not mutually exclusive}}
-\]
+**The events are not mutually exclusive.**
 
 ### Independent or Dependent?
 
 The overall probability of passing is:
 
-\[
-P(Pass)=35\%
-\]
+$$
+P(Pass) = 35\%
+$$
 
 The probability of passing given participation in group discussion is:
 
-\[
-P(Pass|Discussion)=37.04\%
-\]
+$$
+P(Pass \mid Discussion) = 37.04\%
+$$
 
 Since:
 
-\[
+$$
 35\% \neq 37.04\%
-\]
+$$
 
 the events are considered **dependent**.
 
 Therefore:
 
-\[
-\boxed{\text{The events are dependent}}
-\]
+**Participating in group discussion and passing the exam are dependent events.**
 
 ---
 
@@ -320,69 +306,85 @@ Let:
 
 Given:
 
-\[
-P(H|P)=0.70
-\]
+$$
+P(H \mid P) = 0.70
+$$
 
-\[
-P(H|F)=0.40
-\]
+$$
+P(H \mid F) = 0.40
+$$
 
-\[
-P(H)=0.60
-\]
+$$
+P(H) = 0.60
+$$
 
-### Step 1: Find P(P)
+### Step 1: Find P(Pass)
 
-First, we find the overall probability of passing:
+First, we find the overall probability of passing.
 
-\[
-P(P)
+$$
+P(Pass)
 =
-\frac{0.60-0.40}{0.70-0.40}
-\]
-
-\[
-P(P)
-=
-\frac{0.20}{0.30}
-\]
-
-\[
-P(P)=0.6667
-\]
-
-Therefore:
-
-\[
-\boxed{P(P)=66.67\%}
-\]
-
-### Step 2: Apply Bayes' Theorem
-
-\[
-P(P|H)
-=
-\frac{P(H|P)P(P)}{P(H)}
-\]
+\frac{P(H)-P(H \mid Fail)}
+{P(H \mid Pass)-P(H \mid Fail)}
+$$
 
 Substituting the values:
 
-\[
-P(P|H)
+$$
+P(Pass)
 =
-\frac{0.70(0.6667)}{0.60}
-\]
+\frac{0.60-0.40}
+{0.70-0.40}
+$$
 
-\[
-P(P|H)\approx0.7778
-\]
+$$
+P(Pass)
+=
+\frac{0.20}{0.30}
+$$
+
+$$
+P(Pass) = 0.6667
+$$
 
 Therefore:
 
-\[
-\boxed{P(P|H)=77.78\%}
-\]
+**P(Pass) = 66.67%**
+
+### Step 2: Apply Bayes' Theorem
+
+Bayes' Theorem:
+
+$$
+P(Pass \mid High\ Attendance)
+=
+\frac{
+P(High\ Attendance \mid Pass)
+\times
+P(Pass)
+}
+{
+P(High\ Attendance)
+}
+$$
+
+Substituting the values:
+
+$$
+P(Pass \mid High\ Attendance)
+=
+\frac{0.70 \times 0.6667}{0.60}
+$$
+
+$$
+P(Pass \mid High\ Attendance)
+\approx 0.7778
+$$
+
+Therefore:
+
+**P(Pass | High Attendance) = 77.78%**
 
 ### Interpretation
 
